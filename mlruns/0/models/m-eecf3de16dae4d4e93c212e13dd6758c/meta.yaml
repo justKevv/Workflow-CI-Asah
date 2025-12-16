@@ -1,0 +1,10 @@
+artifact_location: file:///home/runner/work/Workflow-CI-Asah/Workflow-CI-Asah/mlruns/0/models/m-eecf3de16dae4d4e93c212e13dd6758c/artifacts
+creation_timestamp: 1765914324387
+experiment_id: '0'
+last_updated_timestamp: 1765914326817
+model_id: m-eecf3de16dae4d4e93c212e13dd6758c
+model_type: null
+name: model
+source_run_id: 0642d0e0ff0d495da450f76c48a0dd5d
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Asah/Workflow-CI-Asah/mlruns/0/0642d0e0ff0d495da450f76c48a0dd5d/artifacts
+end_time: 1765914331391
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0642d0e0ff0d495da450f76c48a0dd5d
+run_name: respected-sow-794
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765914322125
+status: 3
+tags: []
+user_id: runner
