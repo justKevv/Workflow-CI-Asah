@@ -1,9 +1,12 @@
-name: Basic ML Training
+name: Skilled ML Training (Artifacts)
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+    
+permissions:
+  contents: write
 
 jobs:
   train-model:
@@ -28,10 +31,17 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mlflow scikit-learn pandas numpy
+          
+      - name: Set MLflow Tracking URI
+        run: |
+          echo "MLFLOW_TRACKING_URI=file:./mlruns" >> $GITHUB_ENV
 
       - name: Run mlflow project
         run: |
           mlflow run MLProject --env-manager=local
+          
+      - name: Install Python dependencies (Upload Prep)
+        run: echo "Git is already installed. Ready to push."
 
       - name: Get latest MLflow run_id
         run: |
@@ -39,3 +49,13 @@ jobs:
           # This lists the contents of the default experiment folder (0)
           ls -l mlruns/0 || echo "Experiment folder 0 not found, checking root..."
           ls -R mlruns
+          
+      - name: Upload Artifacts to Repository
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          git add mlruns/
+          
+          git commit -m "Auto-save model artifacts [skip ci]" || echo "No changes to commit"
+          git push
