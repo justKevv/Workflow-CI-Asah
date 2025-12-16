@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Asah/Workflow-CI-Asah/mlruns/0/0cb09fa7d29e405daa74feb40dc4e814/artifacts
+end_time: 1765914623078
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0cb09fa7d29e405daa74feb40dc4e814
+run_name: inquisitive-ape-340
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765914613654
+status: 3
+tags: []
+user_id: runner
