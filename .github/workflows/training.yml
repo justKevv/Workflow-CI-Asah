@@ -1,0 +1,41 @@
+name: Basic ML Training
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  train-model:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run actions/checkout@v3
+        uses: actions/checkout@v3
+        
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Check Env
+        run: |
+          echo "Checking Python version..."
+          python --version
+          echo "Current Directory Structure:"
+          ls -R
+
+      - name: Install dependencies
+        run: |
+          pip install mlflow scikit-learn pandas numpy
+
+      - name: Run mlflow project
+        run: |
+          mlflow run MLProject --no-conda
+
+      - name: Get latest MLflow run_id
+        run: |
+          echo "Checking for generated MLflow runs..."
+          # This lists the contents of the default experiment folder (0)
+          ls -l mlruns/0 || echo "Experiment folder 0 not found, checking root..."
+          ls -R mlruns
