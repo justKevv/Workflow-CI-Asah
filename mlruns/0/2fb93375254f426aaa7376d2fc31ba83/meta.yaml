@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Asah/Workflow-CI-Asah/mlruns/0/2fb93375254f426aaa7376d2fc31ba83/artifacts
+end_time: 1765914985646
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2fb93375254f426aaa7376d2fc31ba83
+run_name: skittish-toad-394
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765914975917
+status: 3
+tags: []
+user_id: runner
