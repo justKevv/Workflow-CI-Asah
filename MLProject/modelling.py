@@ -21,8 +21,6 @@ def main():
     
     mlflow.autolog()
     
-    mlflow.set_experiment("Telco-Churn-Basic-Local")
-    
     with mlflow.start_run():
         model = RandomForestClassifier(n_estimators=100, random_state=42)
         
